@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Zhihu Pure Title",
+  "version": "1.0.0",
+  "description": "移除知乎标签页标题中的私信/消息数量前缀，例如 (3 封私信 / 5 条消息)。",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "zhihu-puretitle@local",
+      "strict_min_version": "109.0"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.zhihu.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
